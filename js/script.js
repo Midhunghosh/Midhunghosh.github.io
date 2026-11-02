@@ -117,9 +117,9 @@ form.addEventListener("submit", e => {
       if (!still) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1; }
       for (let j = i + 1; j < pts.length; j++) {
         const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
-        if (d < 130) { x.strokeStyle = `rgba(56,189,248,${.22 * (1 - d / 130)})`; x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(q.x, q.y); x.stroke(); }
+        if (d < 130) { x.strokeStyle = `rgba(239,70,84,${.18 * (1 - d / 130)})`; x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(q.x, q.y); x.stroke(); }
       }
-      x.fillStyle = "rgba(45,212,191,.7)"; x.beginPath(); x.arc(p.x, p.y, 2, 0, 6.3); x.fill();
+      x.fillStyle = "rgba(255,104,116,.72)"; x.beginPath(); x.arc(p.x, p.y, 2, 0, 6.3); x.fill();
     }
     if (!still) raf = requestAnimationFrame(draw);
   };
